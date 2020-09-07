@@ -8,73 +8,200 @@
     <title>Frontend Mentor | Bookmark landing page</title>
 </head>
 
-<body>
+<body class="l-container">
     <header class="main-header">
-        <img src="/assets/img/logo-bookmark.svg" alt="" class="header-logo">
-        <div class="toggle"></div>
-        <nav class="main-nav">
-            <ul class="main-menu">
-                <li class="main-menu__item"><a class="main-menu__link"
-                        href="">Feature</a></li>
-                <li class="main-menu__item"><a class="main-menu__link"
-                        href="#">Pricing</a></li>
-                <li class="main-menu__item"><a class="main-menu__link"
-                        href="">Contact</a></li>
+        <div class="main-header__a">
+            <img src="/assets/img/logo-bookmark.svg" alt="Logo Principal" class="header-logo">
+            <img id="show-toggle" src="/assets/img/icon-hamburger.svg" alt="Logo Menu" class="logo-hamburger">
+            <!-- <div class="toggle"></div> -->
+        </div>
+        <nav id="main-menu" class="main-menu">
+            <ul class=" center">
+                <div class="main-menu__logo">
+                    <img class="header-logo" src="/assets/img/logo-bookmark-footer.svg" alt="">
+                    <img id="main-menu__close" class="images-network" src="/assets/img/icon-close.svg" alt="">
+                </div>
+                <li class="main-menu__item"><a class="main-menu__link" href="https://ed.team/cursos/css-avanzado/02/07">Feature</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Pricing</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="">Contact</a></li>
                 <li class="main-menu__item"><a class="main-menu__link" href="">Login</a></li>
+
             </ul>
+            <div class="center footer-images m">
+                <img class="images-network" src="/assets/img/icon-facebook.svg" alt="Facebook">
+                <img class="images-network" src="/assets/img/icon-twitter.svg" alt="Twitter">
+
+            </div>
         </nav>
     </header>
     <main>
 
         <div class="banner">
             <img src="/assets/img/illustration-hero.svg" alt="">
-            <h1 class="banner-title">A Simple Bookmark Manage</h1>
-            <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+            <h1 class="center banner-title">A Simple Bookmark Manage</h1>
+            <p class="center">A clean and simple interface to organize your favourite websites. Open a new browser tab
+                and see your
+                sites load instantly. Try it for free.</p>
+            <div class="banner-button">
+                <a class="button button-blue center" href="#">Get it on Chrome</a>
+                <a class="button center" href="#">Get it on Firefox</a>
+            </div>
         </div>
-        
-        <article>
-            <h2>Features</h2>
-            <p>Our aim is to make it quick and easy for you to access your favourite websites. 
-            Your bookmarks sync between your devices so you can access them on the go.</p>
-            <a href="#">Simple Bookmarking</a>  
-            <a href="#">Speedy Searching</a>  
-            <a href="#">Easy Sharing</a>  
+
+        <article class="features">
+            <h2 class="center">Features</h2>
+            <p class="center">Our aim is to make it quick and easy for you to access your favourite websites.
+                Your bookmarks sync between your devices so you can access them on the go.</p>
+            <div class="features-button center">
+                <a class="button" href="#"><span data-id="s-b" class="f-btn button-simple">Simple Bookmarking</span></a>
+                <a class="button" href="#"><span data-id="s-s" class="f-btn">Speedy Searching</span></a>
+                <a class="button" href="#"><span data-id="e-s" class="f-btn">Easy Sharing</span></a>
+            </div>
+
+            <div id="s-b" class="cards-features show-card center">
+                <img src="/assets/img/illustration-features-tab-1.svg" alt="">
+                <h2>Bookmark in one click
+                </h2>
+                <p class="center">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
+                    complete control
+                    over how you manage your favourite sites.</p>
+                <a class="button button-blue" href="#">More Info</a>
+            </div>
+            <div id="s-s" class="cards-features center">
+                <img src="/assets/img/illustration-features-tab-2.svg" alt="">
+                <h2>Intelligent Search
+                </h2>
+                <p class="center">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
+                    complete control
+                    over how you manage your favourite sites.</p>
+                <a class="button button-blue" href="#">More Info</a>
+            </div>
+            <div id="e-s" class="cards-features center">
+                <img src="/assets/img/illustration-features-tab-3.svg" alt="">
+                <h2>Share you bookmarks
+                </h2>
+                <p class="center">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
+                    complete control
+                    over how you manage your favourite sites.</p>
+                <a class="button button-blue" href="#">More Info</a>
+            </div>
+
         </article>
 
-        <div>
-            <img src="/assets/img/illustration-features-tab-1.svg" alt="">
-            <h2>Bookmark in one click
-            </h2>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <a href="#">More Info</a>
-        </div>
 
-        <article>
-            <h2>Download the extension</h2>
-            <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+        <article class="extension">
+            <h2 class="center">Download the extension</h2>
+            <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
+                prioritize.</p>
             <div class="cards">
-                <div class="cards-items">
-                    <img src="/assets/img/logo-chrome.svg" alt="Logo Chrome">
+                <div class="center cards-items">
+                    <img class="cards-items__image" src="/assets/img/logo-chrome.svg" alt="Logo Chrome">
                     <h3>Add To Chrome</h3>
                     <p>Minimum version 62</p>
-                    <a href="#">Add & Install Extension</a>
+                    <a class="button button-blue" href="#">Add & Install Extension</a>
                 </div>
-                <div class="cards-items">
-                    <img src="/assets/img/logo-firefox.svg" alt="">
+                <div class="center cards-items">
+                    <img class="cards-items__image" src="/assets/img/logo-firefox.svg" alt="">
                     <h3>Add To Firefox</h3>
                     <p>Minimum version 55</p>
-                    <a href="#">Add & Install Extension</a>
+                    <a class="button button-blue" href="#">Add & Install Extension</a>
                 </div>
-                <div class="cards-items">
-                    <img src="/assets/img/logo-opera.svg" alt="">
+                <div class="center cards-items">
+                    <img class="cards-items__image" src="/assets/img/logo-opera.svg" alt="">
                     <h3>Add to Opera</h3>
                     <p>Minimum version 46</p>
-                    <a href="#">Add & Install Extension</a>
+                    <a class="button button-blue" href="#">Add & Install Extension</a>
                 </div>
+            </div>
+        </article>
+
+        <article class="mb-1">
+            <h2 class="center">Frequently Asked Questions</h2>
+            <p class="ask-que">Here are some of our FAQs. If you have any other questions you’d like
+                answered please feel free to email us.</p>
+
+            <div class="ask-section">
+                <div class="mb-1">
+                    <div data-id="ask-1" class="ask-section__title">
+                        <h3>What is Bookmark?</h3><img class="ask-section__image" src="/assets/img/icon-arrow.svg"
+                            alt="">
+                    </div>
+                    <p id="ask-1" class="ask-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                        tincidunt
+                        justo eget ultricies fringilla. Phasellus blanditipsum quis quam ornare mattis.</p>
+                </div>
+
+                <div class="mb-1">
+                    <div class="ask-section__title">
+                        <h3>How can I request a new browser?</h3> <img class="ask-section__image"
+                            src="/assets/img/icon-arrow.svg" alt="">
+                    </div>
+                    <p class="ask-paragraph">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                        ultricies non ligula.
+                        Suspendisse imperdiet. Vivamus luctus eros aliquetconvallis ultricies. Mauris augue massa,
+                        ultricies non ligula. Suspendisse imperdie tVivamusluctus eros aliquet convallis ultricies.
+                        Mauris augue massa, ultricies non ligula.Suspendisse imperdiet.</p>
+                </div>
+
+                <div class="mb-1">
+                    <div class="ask-section__title">
+                        <h3>Is there a mobile app?</h3><img class="ask-section__image" src="/assets/img/icon-arrow.svg"
+                            alt="">
+                    </div>
+                    <p class="ask-paragraph">Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+                        vestibulum dolor, ut condimentum
+                        urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                        sollicitudin ex et ultricies bibendum.</p>
+                </div>
+
+                <div class="mb-1">
+                    <div class="ask-section__title">
+                        <h3>What about other Chromium browsers?</h3> <img class="ask-section__image"
+                            src="/assets/img/icon-arrow.svg" alt="">
+                    </div>
+                    <p class="ask-paragraph">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
+                        euismod dui. Aliquam
+                        vitae neque eget nisl gravida pellentesque non ut velit.</p>
+                </div>
+                <a class="center button button-blue button-info" href="#">More Info</a>
             </div>
         </article>
     </main>
 
+    <footer>
+        <div class="center footer-contact">
+            <div class="p-1">
+                <p class="footer-paragraph">35,000+ already joined</p>
+                <p class="footer-contact__stay">Stay up-to-date with what we’re doing
+                </p>
+                <div class="footer-contact__email">
+                    <input type="email">
+                    <a class="button email-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-redes">
+            <div class="footer-items">
+                <img src="/assets/img/logo-bookmark-footer.svg" alt="">
+                <ul class="center main-menu__footer">
+                    <li class="menu-footer"><a class="menu-link" href="">Features</a></li>
+                    <li class="menu-footer"><a class="menu-link" href="#">Pricing</a></li>
+                    <li class="menu-footer"><a class="menu-link" href="">Contact</a></li>
+                </ul>
+
+                <div class="center footer-images">
+                    <img class="images-network" src="/assets/img/icon-facebook.svg" alt="Facebook">
+                    <img class="images-network" src="/assets/img/icon-twitter.svg" alt="Twitter">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/ask.js"></script>
 </body>
 
 </html>

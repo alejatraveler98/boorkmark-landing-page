@@ -1,0 +1,22 @@
+.button{
+    padding: 1rem;
+    color  : var(--dark-blue);
+    
+}
+
+.button-info{
+    width : 6rem;
+    margin: auto;
+}
+
+.button-blue{
+    background-color: var(--soft-blue);
+    color           : #fff;
+    border-radius   : 4px;
+}
+
+.button-simple{
+    padding-bottom: 1rem;
+    border-bottom : 3px solid var(--soft-red);
+}
+

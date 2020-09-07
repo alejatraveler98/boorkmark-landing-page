@@ -1,0 +1,246 @@
+/*Para ocupar el mixin se requiere de un breakpoint, este breakpoint
+contiene las medidas que vamos a manejar para nuestras pantallas ya dependera
+de nosotros que medidas vamos a tomar porque */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000; }
+
+:root {
+  --soft-blue: hsl(231,69%,60%);
+  --soft-red: hsl(0,94%,66%);
+  --gray-blue: hsl(229,8%,60%);
+  --dark-blue: hsl(229,31%,21%); }
+
+:root {
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --body-font-size: 14px; }
+  @media screen and (min-width: 640px) {
+    :root {
+      --h1-font-size: 2.5rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.5rem;
+      --body-font-size: 18px;
+      --small-font-size: .8rem; } }
+
+/*Aqui colocamos todas nuestras fuentes ya
+ya sea de Google Fonts o cualquier pagina que lo 
+proporcione
+*/
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--body-font-size);
+  font-weight: 500; }
+
+a {
+  text-decoration: none;
+  display: block; }
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0; }
+
+img {
+  width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: bold;
+  color: var(--dark-blue); }
+
+h1 {
+  font-size: var(--h1-font-size); }
+
+h2 {
+  font-size: var(--h2-font-size); }
+
+p {
+  color: var(--gray-blue); }
+
+.l-container {
+  max-width: 1200px;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+
+.center {
+  text-align: center; }
+
+.banner-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.features-button {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+
+.mb-1 {
+  margin-bottom: 1.5rem; }
+
+.p-1 {
+  padding: 1rem; }
+
+/*Componente Banner*/
+.banner {
+  margin-bottom: 5rem; }
+
+/*Componente Features*/
+.features, .extension {
+  margin-bottom: 5rem; }
+  .features-button, .extension-button {
+    margin-bottom: 2rem; }
+
+.cards-features {
+  margin-bottom: 1rem; }
+
+.cards-features {
+  display: none; }
+
+.show-card {
+  display: block; }
+
+/*Componente Extensiones*/
+.cards-items {
+  margin-bottom: 4rem; }
+  .cards-items__image {
+    width: 80px;
+    margin-bottom: 1rem; }
+
+/*Componente Asked Questions*/
+.ask-que {
+  margin-bottom: 2rem; }
+
+.ask-section__title {
+  display: flex;
+  justify-content: space-between; }
+
+.ask-section__image {
+  width: 1.5rem;
+  height: 1rem; }
+
+.ask-section > div p:target {
+  display: block; }
+
+.ask-paragraph {
+  display: none; }
+
+.show-paragraph {
+  display: flex; }
+
+/*Component footer*/
+.footer-contact {
+  background-color: var(--soft-blue);
+  padding-bottom: 2rem; }
+  .footer-contact p {
+    color: #fff;
+    font-weight: bold; }
+  .footer-contact__email input {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 4px; }
+  .footer-contact .email-button {
+    background-color: var(--soft-red);
+    color: #fff;
+    padding: .8rem; }
+  .footer-contact__stay {
+    font-size: 18px; }
+
+.footer-paragrpah {
+  text-transform: uppercase; }
+
+.footer-redes {
+  background-color: var(--dark-blue); }
+
+/*Component footer*/
+.footer-items {
+  padding: 4rem; }
+
+.footer-images {
+  display: flex;
+  justify-content: space-around; }
+
+.main-menu__footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.menu-link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: .5rem;
+  color: #fff; }
+
+.images-network {
+  width: 1rem;
+  height: 1rem; }
+
+.main-header {
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  .main-header__a {
+    display: flex;
+    justify-content: space-between;
+    height: 1.6rem; }
+
+.main-menu {
+  opacity: 0;
+  position: fixed;
+  background-color: var(--dark-blue);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none; }
+  .main-menu__logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem; }
+  .main-menu__item {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .main-menu__link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-top: 0.5px solid var(--gray-blue);
+    padding: 1rem; }
+
+.show-toggle {
+  opacity: .9;
+  pointer-events: initial; }
+
+.m {
+  margin-top: 8rem; }
+
+.logo-hamburger {
+  width: 1.5rem; }
+
+.header-logo {
+  width: 160px; }
+
+.button {
+  padding: 1rem;
+  color: var(--dark-blue); }
+
+.button-info {
+  width: 6rem;
+  margin: auto; }
+
+.button-blue {
+  background-color: var(--soft-blue);
+  color: #fff;
+  border-radius: 4px; }
+
+.button-simple {
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--soft-red); }
