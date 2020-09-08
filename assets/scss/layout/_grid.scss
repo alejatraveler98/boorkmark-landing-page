@@ -1,20 +1,37 @@
 .l-container {
-    max-width: 1200px;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
+    max-width   : 1200px;
     margin-left : 2rem;
     margin-right: 2rem;
-    
+    @include media(xlarge){
+        margin-left : auto;
+        margin-right: auto;
+    }
 }
 
 .center{
     text-align: center;
 }
 
-.banner-button{
-    display              : grid;
-    grid-template-columns: repeat(2,1fr);
+.banner-l{
+    display            : grid;
+    grid-template-areas: 'bannerimages bannerimages'
+                        'content content';
+        @include media(large){
+            align-items          : center;
+            grid-template-areas  : 'content bannerimages';
+            grid-template-columns: repeat(2,2fr) ;
+
+        }
+    }
+.c{
+    grid-area: bannerimages;
 }
+.banner-content{
+    text-align: center;
+    grid-area : content;
+}
+
+
 .features-button{
     display              : grid;
     grid-template-columns: repeat(1,1fr);

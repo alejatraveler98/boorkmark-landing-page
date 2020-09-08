@@ -20,7 +20,7 @@ de nosotros que medidas vamos a tomar porque */
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
   --body-font-size: 14px; }
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 740px) {
     :root {
       --h1-font-size: 2.5rem;
       --h2-font-size: 1.75rem;
@@ -71,13 +71,29 @@ p {
   max-width: 1200px;
   margin-left: 2rem;
   margin-right: 2rem; }
+  @media screen and (min-width: 1240px) {
+    .l-container {
+      margin-left: auto;
+      margin-right: auto; } }
 
 .center {
   text-align: center; }
 
-.banner-button {
+.banner-l {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-areas: 'bannerimages bannerimages' 'content content'; }
+  @media screen and (min-width: 960px) {
+    .banner-l {
+      align-items: center;
+      grid-template-areas: 'content bannerimages';
+      grid-template-columns: repeat(2, 2fr); } }
+
+.c {
+  grid-area: bannerimages; }
+
+.banner-content {
+  text-align: center;
+  grid-area: content; }
 
 .features-button {
   display: grid;
@@ -88,10 +104,6 @@ p {
 
 .p-1 {
   padding: 1rem; }
-
-/*Componente Banner*/
-.banner {
-  margin-bottom: 5rem; }
 
 /*Componente Features*/
 .features, .extension {
@@ -187,6 +199,11 @@ p {
 .main-header {
   margin-top: 1rem;
   margin-bottom: 3rem; }
+  @media screen and (min-width: 740px) {
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
   .main-header__a {
     display: flex;
     justify-content: space-between;
@@ -201,19 +218,45 @@ p {
   left: 0;
   top: 0;
   pointer-events: none; }
+  @media screen and (min-width: 740px) {
+    .main-menu-list {
+      display: flex;
+      justify-content: flex-end; } }
+  @media screen and (min-width: 740px) {
+    .main-menu {
+      position: static;
+      opacity: 1;
+      background-color: inherit; } }
   .main-menu__logo {
     display: flex;
     justify-content: space-between;
     padding: 2rem; }
+    @media screen and (min-width: 740px) {
+      .main-menu__logo {
+        display: none; } }
   .main-menu__item {
     padding-left: 2rem;
     padding-right: 2rem; }
+    @media screen and (min-width: 740px) {
+      .main-menu__item {
+        padding: 1rem; } }
   .main-menu__link {
     color: #fff;
     text-transform: uppercase;
     font-size: 20px;
     border-top: 0.5px solid var(--gray-blue);
     padding: 1rem; }
+    @media screen and (min-width: 740px) {
+      .main-menu__link {
+        color: var(--gray-blue);
+        font-size: .9rem;
+        border: none;
+        padding: .5rem 1.2rem; } }
+
+.item-login {
+  background-color: var(--soft-red);
+  color: #fff;
+  border-radius: 5px; }
 
 .show-toggle {
   opacity: .9;
@@ -224,9 +267,16 @@ p {
 
 .logo-hamburger {
   width: 1.5rem; }
+  @media screen and (min-width: 740px) {
+    .logo-hamburger {
+      display: none; } }
 
 .header-logo {
   width: 160px; }
+
+@media screen and (min-width: 740px) {
+  .menu-network {
+    display: none; } }
 
 .button {
   padding: 1rem;
@@ -244,3 +294,20 @@ p {
 .button-simple {
   padding-bottom: 1rem;
   border-bottom: 3px solid var(--soft-red); }
+
+/*Componente Banner*/
+.banner {
+  margin-bottom: 5rem; }
+  @media screen and (min-width: 740px) {
+    .banner-button {
+      display: flex;
+      justify-content: center;
+      font-size: 1rem; } }
+  .banner-content {
+    padding-left: 4rem;
+    padding-right: 4rem; }
+    @media screen and (min-width: 740px) {
+      .banner-content {
+        margin-left: 2rem; } }
+  .banner-paragraph {
+    font-size: 1.1rem; }

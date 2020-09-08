@@ -1,63 +1,105 @@
 .main-header{
-    margin-top:1rem;
-    margin-bottom:3rem;
+    margin-top   : 1rem;
+    margin-bottom: 3rem;
     
-    &__a{
-        display: flex;
+    @include media(medium){
+        display        : flex;
         justify-content: space-between;
-        height: 1.6rem;
+        align-items    : center;
+    }
+    &__a{
+        display        : flex;
+        justify-content: space-between;
+        height         : 1.6rem;
     }
 }
 
 .main-menu{
-    opacity: 0;   
-    position: fixed;
+    opacity         : 0;
+    position        : fixed;
     background-color: var(--dark-blue);
-    height: 100%;
-    width:100%;
-    left:0;
-    top:0;  
-    pointer-events: none;
+    height          : 100%;
+    width           : 100%;
+    left            : 0;
+    top             : 0;
+    pointer-events  : none;
     
+    &-list{
+        @include media(medium){
+
+            display        : flex;
+            justify-content: flex-end;
+        }
+    }
+    @include media(medium){
+        position        : static;
+        opacity         : 1;
+        background-color: inherit;
+    }
+
     &__logo{
-        display: flex;
+        display        : flex;
         justify-content: space-between;
-        padding: 2rem;
+        padding        : 2rem;
+        
+        @include media(medium){
+            display: none;
+        }
     }
 
     &__item{
-        padding-left: 2rem;
+        padding-left : 2rem;
         padding-right: 2rem;
-        // padding-bottom: 1rem;
+        @include media(medium){
+            padding: 1rem;
+        }
     }
     &__link{
-        color: #fff;
+        color         : #fff;
         text-transform: uppercase;
-        font-size:20px;
-        border-top: .5px solid var(--gray-blue);
-        padding:1rem;
-        // padding-top: 1rem;
-        // padding-bottom: 1rem;
-        // border-bottom: .5px solid var(--gray-blue);
+        font-size     : 20px;
+        border-top    : .5px solid var(--gray-blue);
+        padding       : 1rem;
+        
+        @include media(medium){
+            color    : var(--gray-blue);
+            font-size: .9rem;
+            border   : none;
+            padding  : .5rem 1.2rem;
+        }
     }
 }
 
+.item-login{
+    background-color:var(--soft-red);
+    color: #fff;
+    border-radius: 5px;
+}
 .show-toggle{
-    opacity: .9;
+    opacity       : .9;
     pointer-events: initial;
 }
 
 .m{
-    margin-top:8rem;
+    margin-top: 8rem;
 }
 .logo-hamburger{
-     width: 1.5rem;    
+     width: 1.5rem;
+     @include media(medium){
+        display: none;
+     }   
 }
 
 .header-logo{
-    width:160px;
+    width: 160px;
 
     @include media(medium){
        
+    }
+}
+
+.menu-network{
+    @include media(medium){
+        display: none;
     }
 }
