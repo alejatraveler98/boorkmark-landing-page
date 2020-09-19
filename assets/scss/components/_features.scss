@@ -1,0 +1,36 @@
+/*Componente Features*/
+.features, .extension{
+    margin-bottom: 5rem;
+    &-button{
+        margin-bottom: 2rem;
+    }
+}
+
+.cards-features{
+    margin : 1rem;
+    padding: 1rem;
+    @include media(large){
+        padding-left: 5rem;
+
+    }
+    &__content{
+        
+        @include media(large){
+            margin-left: 4rem;
+        }
+
+    }
+}
+
+.cards-features{
+    display: none;
+}
+
+.show-card{
+    display: block;
+    @include media(large){
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+}

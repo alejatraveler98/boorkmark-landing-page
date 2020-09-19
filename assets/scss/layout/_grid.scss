@@ -12,6 +12,7 @@
     text-align: center;
 }
 
+
 .banner-l{
     display            : grid;
     grid-template-areas: 'bannerimages bannerimages'
@@ -35,6 +36,9 @@
 .features-button{
     display              : grid;
     grid-template-columns: repeat(1,1fr);
+    @include media(medium){
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
 .mb-1{
@@ -44,3 +48,49 @@
 .p-1{
     padding: 1rem;
 }
+
+.features-description, .features-button,.extension-title{
+    @include media(medium){
+        max-width    : 550px;
+        margin-left  : auto;
+        margin-right : auto;
+        margin-bottom: 4rem;
+    }
+}
+
+.cards{
+    grid-template-columns: repeat(1,1fr);
+    @include media(large){
+        max-width            : 900px;
+        margin-left          : auto;
+        margin-right         : auto;
+        display              : grid;
+        grid-template-columns: repeat(3,1fr) ;
+        justify-content      : space-between;
+
+        :nth-child(2){
+            margin-top: 3rem;
+        }
+        :nth-child(3){
+            margin-top: 6rem;
+        }
+    }
+   
+}
+
+.ask-questions{
+    @include media(medium){
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.footer-content{
+    @include media(medium){
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

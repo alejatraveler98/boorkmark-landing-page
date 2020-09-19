@@ -1,0 +1,26 @@
+/*Componente Asked Questions*/
+.ask-que{
+    margin-bottom: 2rem;
+}
+
+.ask-section{
+
+    &__title{
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    &__image{
+        width : 1.5rem;
+        height: 1rem;
+    }
+
+    & > div p:target{
+        display: block;
+    }
+}
+
+.arrow-rotate{
+    transition: transform 1s ease;
+    transform : rotate(180deg);
+}

@@ -23,7 +23,9 @@
     left            : 0;
     top             : 0;
     pointer-events  : none;
-    
+    @include media(medium){
+        pointer-events: initial;
+    }
     &-list{
         @include media(medium){
 
@@ -68,12 +70,20 @@
             padding  : .5rem 1.2rem;
         }
     }
+    &__link:hover{
+        color:var(--soft-red);
+    }
 }
 
 .item-login{
-    background-color:var(--soft-red);
-    color: #fff;
-    border-radius: 5px;
+    background-color: var(--soft-red);
+    color           : #fff;
+    border-radius   : 5px;
+    &:hover{
+        border: 0.1px solid var(--soft-red);
+        color:var(--soft-red);
+        background-color: #fff;
+    }
 }
 .show-toggle{
     opacity       : .9;

@@ -1,0 +1,111 @@
+/*Component footer*/
+.footer-contact{
+    
+    background-color: var(--soft-blue);
+    padding-bottom  : 2rem;
+    & p{
+        color      : #fff;
+        font-weight: bold;
+    }
+    &__email{
+        @include media(small){
+            display        : flex;
+            justify-content: center;
+        }
+    }
+    &__email input{
+        display      : block;
+        margin-bottom: 1rem;
+        width        : 100%;
+        @include media(small){
+            width : 50%;
+            margin: 0 1rem;
+            height: initial;
+        }
+        border-radius: 4px;
+    }
+    .email-button{
+        background-color: var(--soft-red);
+        color           : #fff;
+        padding         : .8rem;
+    }
+
+    &__stay{
+        font-size: 18px;
+    }
+}
+
+.footer-paragrpah{
+    text-transform: uppercase;
+}
+
+.footer-redes{
+    background-color: var(--dark-blue);
+}
+
+
+/*Component footer*/
+
+.footer-items{
+    padding: 4rem;
+    @include media(msmall){
+        display        : flex;
+        justify-content: space-between;
+        padding        : .5rem;
+        height         : 3rem;
+        margin         : 0 1rem;
+    }
+
+    @include media(medium){
+        margin: 0 5rem;
+    }
+    &__content{
+        @include media(msmall){
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            
+        }
+    }
+}
+
+.footer-images{
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+.main-menu__footer{
+    margin-top   : 1rem;
+    margin-bottom: 1rem;
+    @include media(msmall){
+        display        : flex;
+        justify-content: space-between;
+    }
+}
+
+.menu-link{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding       : .5rem;
+    @include media(msmall){
+        padding  : 0 1rem;
+        font-size: 12px;
+    }
+    color: #fff;
+}
+
+.images-network{
+    width : 1rem;
+    height: 1rem;
+    @include media(msmall){
+        margin-left: 10px;
+    }
+}
+
+.img-footer{
+    @include media(msmall){
+        width : 100px;
+        height: auto;
+    }
+}

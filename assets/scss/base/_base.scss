@@ -18,6 +18,9 @@ body{
 a{
     text-decoration: none;
     display        : block;
+    @include media(medium){
+        display: inline-block;
+    }
 }
 
 ul{
